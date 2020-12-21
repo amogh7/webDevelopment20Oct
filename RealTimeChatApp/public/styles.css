@@ -1,0 +1,144 @@
+*{
+   box-sizing: border-box;
+   padding:0px; 
+   margin:0px;
+   font-family: 'Roboto', sans-serif;
+}
+html,body{
+   
+    background-color:lightslategray;
+}
+.name-Container{
+    height:650px;
+    width :500px;
+    background-image:url(images/chat.jpg);
+    background-size:contain;
+    margin:auto;
+    margin-top:50px;
+    text-align: center;
+    padding-top: 50px;
+}
+h1{
+    font-size: 3rem;
+    color:blue;
+}
+h2{
+    margin-top: 100px;  
+    color: green;
+}
+h3{
+    margin-top: 100px;
+    color: crimson;
+
+}
+button {
+    background-color: yellow;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    font-weight: bold;
+    outline: none;
+}
+button:hover{
+    background-color:white ;
+}
+#input-name{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background:transparent;
+    outline: none;
+    height: 40px;
+    
+    font-size: 16px;
+    margin-bottom :10px;
+    
+
+}
+.input1{
+    margin-top: 10px;
+}
+.text-Container{
+    height:650px;
+    width :500px;
+   background-color:lightskyblue;
+    margin:auto;
+    margin-top:50px;
+    
+   
+    
+    
+}
+.chat-box{
+    height:90%;
+    overflow: auto;
+    background-image:url(images/chat.jpg);
+    
+    background-size: contain;
+    
+
+}
+.chat{
+  
+   clear:both;
+   padding:6px;
+  
+   border-radius: 10px;
+   margin: 10px;
+   
+}
+.left{
+background-color: lightyellow;
+float:left;
+color: #34495e;
+max-width: 300px;
+min-width: 150px;
+
+}
+.joined{
+    text-align: center;
+    color: green;
+}
+.leaved{
+    text-align: center;
+    color: red;
+}
+.right{
+    background-color: #34495e;
+    float:right;
+    color:lightyellow;
+    max-width: 300px;
+    min-width: 150px;
+}
+.name{
+font-weight: bold;
+}
+.text{
+
+}
+.hide{
+    display:None !important;
+}
+.chat-input{
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    height:6%;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 10px;
+
+}
+#input-chat{
+    width: 85%;
+    border: none;
+    
+    height: 100%;
+    outline: none;
+
+}
+.send{
+
+}
+
