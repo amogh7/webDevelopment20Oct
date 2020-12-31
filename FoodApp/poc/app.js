@@ -1,12 +1,60 @@
 const express=require("express");
-let plans =require("./db/plans.json");
-const fs=require("fs");
-let userDb=require("./db/users.json");
-const {v4:uuidv4}=require("uuid");
-const { serialize } = require("v8");
+// let plans =require("./db/plans.json");
+// const fs=require("fs");
+// let userDb=require("./db/users.json");
+// const {v4:uuidv4}=require("uuid");
+
+const userModel=require("../BackEnd/Model/usersModel");
+
+const jwt = require("jsonwebtoken");
+app.post("/tokenCreator",async function(req,res){
+     try{                   //payload                        secretKey
+    const token=jwt.sign({id:"12123232",name:"amogh"},"fnvjkfjnvksdjfn");
+    console.log(token);
+    res.json({
+        token
+    });
+}
+catch(error){
+    res.json({
+        message:"Failed to create token"
+    });
+}
+});
+
+app.post("/tokenVerify",function(req,res){
+    const {token}=req.body;
+    console.log(token);                //secret key
+    const payload=jwt.verify(token,"fnvjkfjnvksdjfn")
+})
 
 
-const app=express();
+
+
+// const app=express();
+// //mongoose 
+// const mongoose=require("mongoose");
+
+// mongoose.connect("mongodb+srv://admin:admin@cluster0.sjp4y.mongodb.net/<dbname>?retryWrites=true&w=majority",{useNewUrlParser:true,useUnifiedTopology:true})
+// .then(function(db){
+//     console.log(db);
+// });
+
+// let planScema=new mongoose.Schema({
+//     name:String,
+//     price:Number
+// });
+
+// let planModel=mongoose.model("plansCollection",planScema);
+
+// planModel.create({
+// name:"Vegan",
+// price:50
+// }).then((plan)=>{
+//     console.log(plan);
+// }).catch((error)=>{
+//     console.log(error);
+// });
 
 
 //middlewares
@@ -56,7 +104,6 @@ function createUser(req,res){
     res.status(201).json({
         message:"created a plan",
         data:userDb,
-
     });
 }
 

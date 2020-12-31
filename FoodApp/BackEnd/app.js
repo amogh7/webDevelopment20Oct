@@ -1,14 +1,19 @@
 const express=require("express");
-const PlanRouter = require("../Router/planRouter");
+const PlanRouter = require("./Router/planRouter");
 // let plans =require("./db/plans.json");
 // const fs=require("fs");
 // let userDb=require("./db/users.json");
 
-const userRouter = require("../Router/userRouter");
+const userRouter = require("./Router/userRouter");
 
+const viewRouter=require("./Router/viewRouter");
+
+const path=require("path");
 
 
 const app=express();
+
+
 
 
 
@@ -22,17 +27,20 @@ const app=express();
 // it tracks incoming request and see if there is data in the request => the data will be fed in req.body
 
 app.use(express.json());
-
+app.use(express.static("public"));
 // app.use(function(req,res,next){
 //     console.log("I am called after express.json");
 // });
 
 //app.httpmethod(appRoute,cb function(req,res));
 
-
+app.set("view engine","pug");
+app.set("views",path.join(__dirname,"view"));
 
 app.use("/api/plans",PlanRouter); 
 app.use("/api/users",userRouter);
+app.use("/",viewRouter);
+
 //################################################################users############################################################################ 
 //get all users
 

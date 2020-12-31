@@ -6,7 +6,7 @@
 }
 
 #head{
-    background-image:linear-gradient(rgba(15, 15, 15, 0.8),rgba(22, 5, 5, 0.5)) ,url("images/pexels-chan-walrus-958545.jpg");
+    background-image:linear-gradient(rgba(15, 15, 15, 0.8),rgba(22, 5, 5, 0.5)) ,url("../images/pexels-chan-walrus-958545.jpg");
     height:100vh;
     width:100vw;
     background-attachment: fixed;
@@ -26,7 +26,7 @@
 .nav{
    font-size: 1rem;
    margin:20px 10px 10px;
-   color:white;
+   color:black;
    text-decoration: none;
    height: 25px;
    
@@ -257,7 +257,7 @@ p{
     margin-bottom: 30px
 }
 #review-section{
-    background-image:linear-gradient(rgba(15, 15, 15, 0.8),rgba(22, 5, 5, 0.5)) ,url("images/pexels-chan-walrus-958545.jpg");
+    background-image:linear-gradient(rgba(15, 15, 15, 0.8),rgba(22, 5, 5, 0.5)) ,url("../images/pexels-chan-walrus-958545.jpg");
     height:100vh;
     width:100vw;
     background-attachment: fixed;
@@ -459,7 +459,7 @@ p{
     
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 25px;
    font-size: 1.7rem;
    
   }
