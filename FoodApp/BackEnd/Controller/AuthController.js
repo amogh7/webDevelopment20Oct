@@ -20,7 +20,7 @@ try{
 
 }
 catch(error){
-    res.status(501).json({
+    res.status(201).json({
         message:"Failed to send",
         error:error,
     });
@@ -36,10 +36,12 @@ async function login(req,res){
                let user=loggedInUser[0];
                if(user.password==password){
                    const token=jwt.sign({id:user["_id"]},SECRET_KEY);
+                   res.cookie('jwt',token,{httpOnly:true});
+                   
                    res.status(200).json({
                        message:"loged in Successfuly",
                        data:loggedInUser[0],
-                       token,
+                    //    token,
                    });
                }else{
                    res.status(200).json({
