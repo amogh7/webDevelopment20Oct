@@ -23,6 +23,7 @@ body{
     margin:30px auto 5px;
     padding: 23px ; 
     background: rgba(0,0,0,0.5); 
+    min-height: 463px;
 }
 
 .input1{
