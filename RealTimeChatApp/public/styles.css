@@ -6,12 +6,12 @@
 }
 html,body{
    
-    background-color:lightslategray;
+    background-color: rgb(128, 96, 101);
 }
 .name-Container{
-    height:650px;
+    height:600px;
     width :500px;
-    background-image:url(images/chat.jpg);
+    background: rgba(0,0,0,0.5);;
     background-size:contain;
     margin:auto;
     margin-top:50px;
@@ -20,11 +20,11 @@ html,body{
 }
 h1{
     font-size: 3rem;
-    color:blue;
+    color:white;
 }
 h2{
     margin-top: 100px;  
-    color: green;
+    color: white;
 }
 h3{
     margin-top: 100px;
@@ -32,15 +32,18 @@ h3{
 
 }
 button {
-    background-color: yellow;
-    border-radius: 10px;
-    height: 30px;
-    width: 80px;
-    font-weight: bold;
-    outline: none;
+    width:90%;
+    margin :50px auto 40px;
+    display:block;
+    border:none;
+    padding: 10px 54px;
+    background-color: crimson;
+    cursor: pointer;      
+   
+    border-radius: 5px;
 }
 button:hover{
-    background-color:white ;
+    background-color :rgb(119, 104, 155);
 }
 #input-name{
     border: none;

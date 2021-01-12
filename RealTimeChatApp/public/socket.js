@@ -7,7 +7,6 @@ joinDiv.classList.add("chat");
 joinDiv.classList.add("joined");
 joinDiv.innerHTML=`${name} joined the chat`;
 chatBox.append(joinDiv);
-
 });
 
 socket.on("recieve-chat",function(userObj){

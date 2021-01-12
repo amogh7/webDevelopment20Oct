@@ -8,8 +8,9 @@ app.use(express.static('public'));
 app.get('/',function(req,res){
     res.sendFile(__dirname+"/public/index.html");
     // res.redirect("/index.html");
-})
+});
 let users=[];
+
 io.on('connection',function(socket){
     console.log(`${socket.id} connected`);
     socket.on("joined-chat",function(name){

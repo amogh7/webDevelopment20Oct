@@ -11,7 +11,7 @@ joinChat.addEventListener("click",function(){
      user=userName.value;
     if(user){
         socket.emit("joined-chat",user);
-        console.log("clicked");
+         console.log("clicked");
          chatContent.classList.remove("hide");
          chatInputDiv.classList.add("hide");
     }
@@ -29,3 +29,20 @@ if(chatMessage){
 
 }
 });
+
+window.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+let chatMessage=chat.value
+if(chatMessage){
+   
+            socket.emit("chat-send",{user,chatMessage});
+            addChat("right",{user,chatMessage});
+            chatBox.scrollTop=chatBox.scrollHeight;
+            chat.value="";
+        }
+    }
+    });
+    
+
+
+
